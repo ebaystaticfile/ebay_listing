@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"><html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>GMT+8 time</title>
+<style type="text/css">
+p {fONT-FAMILY: 'Lato', sans-serif; FONT-SIZE: 12pt;line-height:12pt;color:#999999;}
+TD {fONT-FAMILY: 'Lato', sans-serif; FONT-SIZE: 12pt;color:#999999;}
+a:active{color:green;text-decoration:none}
+a:hover{color:red;text-decoration:underline}  
+ </style>
+</head>
+<body  leftmargin="0" topmargin="0" style="background-color:transparent">
+<table cellspacing=0 cellpadding=0 width=100% height=100%>
+<tr><td align="center" valign="middle">
+<script> 
+<!-- Begin 
+function Year_Month(){ 
+var now = new Date(); 
+var yy = now.getFullYear(); 
+var mm = now.getMonth()+1; 
+var cl = ''; 
+return(cl +yy + '/' + mm + '/'); 
+}function Date_of_Today(){ 
+var now = new Date(); 
+var cl = ''; 
+if (now.getDay() == 0) cl = ''; 
+if (now.getDay() == 6) cl = ''; 
+return(cl +now.getDate() + ''); 
+}function Day_of_Today(){ 
+var day = new Array(); 
+day[0] = "Sunday"; 
+day[1] = "Monday"; 
+day[2] = "Tuesday"; 
+day[3] = "Wednesday"; 
+day[4] = "Thursday"; 
+day[5] = "Friday"; 
+day[6] = "Saturday"; 
+var now = new Date(); 
+var cl = ''; 
+if (now.getDay() == 0) cl = ''; 
+if (now.getDay() == 6) cl = ''; 
+return(cl +day[now.getDay()] + ''); 
+}function CurentTime(){ 
+var now = new Date(); 
+var hh = now.getHours(); 
+var mm = now.getMinutes(); 
+var ss = now.getTime() % 60000; 
+ss = (ss - (ss % 1000)) / 1000; 
+var clock = hh+':'; 
+if (mm < 10) clock += '0'; 
+clock += mm+':'; 
+if (ss < 10) clock += '0'; 
+clock += ss; 
+return(clock); 
+}function refreshCalendarClock(){ 
+document.all.calendarClock0.innerHTML = ''; 
+document.all.calendarClock1.innerHTML = Year_Month(); 
+document.all.calendarClock2.innerHTML = Date_of_Today(); 
+document.all.calendarClock3.innerHTML = Day_of_Today(); 
+document.all.calendarClock4.innerHTML = CurentTime(); 
+}
+document.write('<font id="calendarClock0" style=""></font>GMT+8 Time Now: ');
+document.write('<font id="calendarClock1" style=""></font>'); 
+document.write('<font id="calendarClock2" style=""></font>  '); 
+document.write('<font id="calendarClock3" style=""></font> '); 
+document.write('<font id="calendarClock4" style=""></font>'); 
+refreshCalendarClock() 
+setInterval('refreshCalendarClock()',1000); 
+-->
+</script>
+</a>
+</body>
+</html>
